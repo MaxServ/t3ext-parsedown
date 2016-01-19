@@ -47,7 +47,7 @@ class AjaxController
         AjaxRequestHandler &$ajaxObj = null
     ) {
         $parseDown = new \Parsedown();
-        $content = urldecode(GeneralUtility::_GET('content'));
+        $content = urldecode(GeneralUtility::_POST('content'));
         $ajaxObj->addContent('preview', json_encode($parseDown->text((string)$content)));
     }
 }

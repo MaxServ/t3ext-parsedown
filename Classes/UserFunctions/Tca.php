@@ -67,18 +67,18 @@ var MaxServ_ParseDown_1453219381 = (function () {
 		idleWait: 2000,
 		updatePreview: function (content) {
 			var url = TYPO3.settings.ajaxUrls['ParsedownAjaxController::renderPreview'];
-			var jqxhr = TYPO3.jQuery.getJSON(
-					url,
-					{content: content},
-					function () {
-					}
-					)
-					.done(function (data) {
-						TYPO3.jQuery('#tx_parsedown_preview').html(data);
-					})
-					.fail(function (d, textStatus, error) {
-						console.error('Markdown preview failed, status: ' + textStatus + ', error: ' + error);
-					});
+			var jqxhr = TYPO3.jQuery.ajax({
+				url: url,
+				type: 'post',
+				dataType: 'json',
+				data: {content: content},
+				success: function (data) {
+					TYPO3.jQuery('#tx_parsedown_preview').html(data);
+				},
+				error: function (d, textStatus, error) {
+					console.error('Markdown preview failed, status: ' + textStatus + ', error: ' + error);
+				}
+			});
 		}
 	};
 }());
