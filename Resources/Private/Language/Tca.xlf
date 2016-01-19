@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-11-26T17:55:17Z" product-name="leaf">
+		<header/>
+		<body>
+			<trans-unit id="plugin.markdown" xml:space="preserve">
+				<source>Markdown</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_parsedown_content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_parsedown_preview" xml:space="preserve">
+				<source>Preview</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

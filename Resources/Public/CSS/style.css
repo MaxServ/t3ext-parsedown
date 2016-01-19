@@ -1,0 +1,15 @@
+#tx_parsedown_preview {
+	padding: 0.75em;
+	position: relative;
+	background-color: #fefefe;
+	border: 1px solid #7c7c7c;
+	border-radius: 2px;
+}
+
+#tx_parsedown_preview pre {
+	padding: 0.75em;
+	position: relative;
+	background-color: #f3f3f3;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+}
