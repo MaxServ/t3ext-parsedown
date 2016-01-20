@@ -35,7 +35,6 @@ if (!class_exists('Parsedown')) {
  */
 class TceMain
 {
-
     /**
      * Convert markdown to html on saving
      *
