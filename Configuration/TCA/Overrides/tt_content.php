@@ -36,9 +36,9 @@ $additionalColumns = array(
 
 $GLOBALS['TCA']['tt_content']['types']['parsedown_markdown']['showitem'] = '
 	--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
-	--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
 	tx_parsedown_content,
 	tx_parsedown_preview,
+	--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,
 	--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.appearance,
 	--palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
 	--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
