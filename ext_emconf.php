@@ -1,7 +1,7 @@
 <?php
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'Markdown content element',
-    'description' => 'Mardown content element. Write your content in Markdown.',
+    'description' => 'Markdown content element. Write your content in Markdown.',
     'category' => 'BE',
     'author' => 'Michiel Roos',
     'author_email' => 'michiel@maxserv.com',

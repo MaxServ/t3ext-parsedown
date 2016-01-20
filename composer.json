@@ -1,7 +1,7 @@
 {
   "name": "maxserv/parsedown",
   "type": "typo3-cms-extension",
-  "description": "Mardown content element. Write your content in Markdown.",
+  "description": "Markdown content element. Write your content in Markdown.",
   "license": [
     "GPL-2.0+"
   ],

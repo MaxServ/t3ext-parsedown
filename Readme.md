@@ -1,5 +1,5 @@
 # TYPO3 extension: parsedown
-Mardown content element. Write your content in Markdown.
+Markdown content element. Write your content in Markdown.
 
 Clone it
 ```bash

@@ -23,7 +23,7 @@ Parsedown
 			en
 
 	:Description:
-			Mardown content element. Write your content in Markdown. Live preview in the backend.
+			Markdown content element. Write your content in Markdown. Live preview in the backend.
 
 	:Keywords:
 			markdown, content

@@ -7,7 +7,7 @@
 				<source>Markdown</source>
 			</trans-unit>
 			<trans-unit id="wizard.description" xml:space="preserve">
-				<source>Mardown content element. Write your content in Markdown and see a live preview in the backend.</source>
+				<source>Markdown content element. Write your content in Markdown and see a live preview in the backend.</source>
 			</trans-unit>
 			<trans-unit id="tt_content.tx_parsedown_content" xml:space="preserve">
 				<source>Content</source>

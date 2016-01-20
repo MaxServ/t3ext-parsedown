@@ -7,8 +7,22 @@ if (TYPO3_MODE == 'BE') {
         'MaxServ\\Parsedown\\Controller\\AjaxController->renderPreview'
     );
 
-    $GLOBALS['TBE_MODULES_EXT']['xMOD_db_new_content_el']['addElClasses']['MaxServ\\Parsedown\\Utility\\WizardIcon'] =
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('parsedown') . 'Classes/Utility/WizardIcon.php';
+    /*
+     * add TSConfig for tt_content wizardItem for content type: parsedown_markdown
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
+    mod.wizards.newContentElement.wizardItems.common {
+        elements.parsedown_markdown {
+            title = LLL:EXT:parsedown/Resources/Private/Language/Tca.xlf:plugin.markdown
+            icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('parsedown') .
+                      'Resources/Public/Images/ContentElementWizard.png
+            description = LLL:EXT:parsedown/Resources/Private/Language/Tca.xlf:wizard.description
+            tt_content_defValues {
+                CType = parsedown_markdown
+            }
+        }
+        show := addToList(parsedown_markdown)
+    }');
 }
 
 $GLOBALS['TBE_STYLES']['skins']['parsedown'] = array(
