@@ -28,26 +28,25 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 if (!class_exists('Parsedown')) {
-    require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
+	require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
 }
 
 /**
  * TCA User functions
  */
-class AjaxController
-{
-    /**
-     * Render markdown preview
-     *
-     * @param array $parameters
-     * @param AjaxRequestHandler|null $ajaxObj
-     */
-    public function renderPreview(
-        $parameters = array(),
-        AjaxRequestHandler &$ajaxObj = null
-    ) {
-        $parseDown = new \Parsedown();
-        $content = urldecode(GeneralUtility::_POST('content'));
-        $ajaxObj->addContent('preview', json_encode($parseDown->text((string)$content)));
-    }
+class AjaxController {
+	/**
+	 * Render markdown preview
+	 *
+	 * @param array $parameters
+	 * @param AjaxRequestHandler|null $ajaxObj
+	 */
+	public function renderPreview(
+		$parameters = array(),
+		AjaxRequestHandler &$ajaxObj = NULL
+	) {
+		$parseDown = new \Parsedown();
+		$content = urldecode(GeneralUtility::_POST('content'));
+		$ajaxObj->addContent('preview', json_encode($parseDown->text((string)$content)));
+	}
 }

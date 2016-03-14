@@ -26,36 +26,35 @@ namespace MaxServ\Parsedown\Hooks;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 if (!class_exists('Parsedown')) {
-    require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
+	require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
 }
 
 /**
  * class for TCE main hooks
  *
  */
-class TceMain
-{
-    /**
-     * Convert markdown to html on saving
-     *
-     * @param array $incommingFieldArray (reference) The field array of a
-     *     record
-     * @param string $table The table currently processing data for
-     * @param string $id The record uid currently processing data for,
-     *     [integer] or [string] (like 'NEW...')
-     * @param \TYPO3\CMS\Core\DataHandling\DataHandler $parentObject
-     *
-     * @return void
-     */
-    public function processDatamap_preProcessFieldArray(
-        &$incomingFieldArray,
-        $table,
-        $id,
-        $parentObject
-    ) {
-        if ($incomingFieldArray['CType'] == 'parsedown_markdown') {
-            $parseDown = new \Parsedown();
-            $incomingFieldArray['bodytext'] = $parseDown->text((string)$incomingFieldArray['tx_parsedown_content']);
-        }
-    }
+class TceMain {
+	/**
+	 * Convert markdown to html on saving
+	 *
+	 * @param array $incommingFieldArray (reference) The field array of a
+	 *     record
+	 * @param string $table The table currently processing data for
+	 * @param string $id The record uid currently processing data for,
+	 *     [integer] or [string] (like 'NEW...')
+	 * @param \TYPO3\CMS\Core\DataHandling\DataHandler $parentObject
+	 *
+	 * @return void
+	 */
+	public function processDatamap_preProcessFieldArray(
+		&$incomingFieldArray,
+		$table,
+		$id,
+		$parentObject
+	) {
+		if ($incomingFieldArray['CType'] == 'parsedown_markdown') {
+			$parseDown = new \Parsedown();
+			$incomingFieldArray['bodytext'] = $parseDown->text((string)$incomingFieldArray['tx_parsedown_content']);
+		}
+	}
 }

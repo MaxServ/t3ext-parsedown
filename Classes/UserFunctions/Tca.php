@@ -26,38 +26,36 @@ namespace MaxServ\Parsedown\UserFunctions;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 if (!class_exists('Parsedown')) {
-    require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
+	require_once(ExtensionManagementUtility::extPath('parsedown') . 'Classes/Vendor/Erusev/Parsedown/Parsedown.php');
 }
 
 /**
  * TCA User functions
  */
-class Tca
-{
+class Tca {
 
-    /**
-     * Generate preview for the markdown content field
-     *
-     * Edit text using markdown and preview it.
-     *
-     * @param object $PA The field information and the record row
-     * @param object $parentObject The form object
-     *
-     * @return string
-     */
-    public function markdownPreview($PA, $parentObject)
-    {
-        $parseDown = new \Parsedown();
+	/**
+	 * Generate preview for the markdown content field
+	 *
+	 * Edit text using markdown and preview it.
+	 *
+	 * @param object $PA The field information and the record row
+	 * @param object $parentObject The form object
+	 *
+	 * @return string
+	 */
+	public function markdownPreview($PA, $parentObject) {
+		$parseDown = new \Parsedown();
 
-        $dataPrefix = 'data[' . $PA['table'] . '][' . $PA['row']['uid'] . ']';
+		$dataPrefix = 'data[' . $PA['table'] . '][' . $PA['row']['uid'] . ']';
 
-        // data[tt_content][24][tx_parsedown_content]
-        $contentField = $dataPrefix . '[tx_parsedown_content]';
+		// data[tt_content][24][tx_parsedown_content]
+		$contentField = $dataPrefix . '[tx_parsedown_content]';
 
-        $output = '<div id="tx_parsedown_preview">';
-        $output .= $parseDown->text((string)$PA['row']['tx_parsedown_content']);
-        $output .= '</div>';
-        $output .= "<script type='text/javascript'>
+		$output = '<div id="tx_parsedown_preview">';
+		$output .= $parseDown->text((string)$PA['row']['tx_parsedown_content']);
+		$output .= '</div>';
+		$output .= "<script type='text/javascript'>
 var MaxServ_ParseDown_1453219381 = (function () {
 	'use strict';
 	return {
@@ -108,6 +106,6 @@ TYPO3.jQuery(document).ready(function ($) {
 	});
 });
         </script>";
-        return $output;
-    }
+		return $output;
+	}
 }

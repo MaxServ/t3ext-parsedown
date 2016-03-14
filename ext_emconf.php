@@ -22,24 +22,24 @@
  */
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'Markdown content element',
-    'description' => 'Markdown content element. Write your content in Markdown.',
-    'category' => 'BE',
-    'author' => 'Michiel Roos',
-    'author_email' => 'michiel@maxserv.com',
-    'conflicts' => '',
-    'dependencies' => '',
-    'state' => 'stable',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'clearCacheOnLoad' => 1,
-    'author_company' => 'MaxServ B.V.',
-    'version' => '1.0.3',
-    'constraints' => array(
-        'depends' => array(
-            'typo3' => '6.2.0-7.99.99',
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
+	'title' => 'Markdown content element',
+	'description' => 'Markdown content element. Write your content in Markdown.',
+	'category' => 'BE',
+	'author' => 'Michiel Roos',
+	'author_email' => 'michiel@maxserv.com',
+	'conflicts' => '',
+	'dependencies' => '',
+	'state' => 'stable',
+	'uploadfolder' => 0,
+	'createDirs' => '',
+	'clearCacheOnLoad' => 1,
+	'author_company' => 'MaxServ B.V.',
+	'version' => '1.0.4',
+	'constraints' => array(
+		'depends' => array(
+			'typo3' => '6.2.0-7.99.99',
+		),
+		'conflicts' => array(),
+		'suggests' => array(),
+	),
 );
