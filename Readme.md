@@ -1,6 +1,8 @@
 # TYPO3 extension: parsedown
 Markdown content element. Write your content in Markdown.
 
+[![Latest Stable Version](https://poser.pugx.org/maxserv/parsedown/v/stable)](https://packagist.org/packages/maxserv/parsedown) [![Total Downloads](https://poser.pugx.org/maxserv/parsedown/downloads)](https://packagist.org/packages/maxserv/parsedown) [![Latest Unstable Version](https://poser.pugx.org/maxserv/parsedown/v/unstable)](https://packagist.org/packages/maxserv/parsedown) [![License](https://poser.pugx.org/maxserv/parsedown/license)](https://packagist.org/packages/maxserv/parsedown)
+
 Clone it
 ```bash
 git clone https://github.com/MaxServ/t3ext-parsedown.git parsedown
